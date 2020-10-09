@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        Podstawa potęgi <input type="number" id="podstawa"><br>
+        wykładnik potęgi <input type="number" id="wykladnik"><br>
+        <button onclick="policz()">Policz</button><br>
+        Wynik <input type="number" id="wynik" disabled>
+
+        <script>
+            function policz() {
+            var podstawa = document.getElementById('podstawa').value;
+            podstawa = parseInt(podstawa);
+            var wykladnik = document.getElementById('wykladnik').value;
+            wykladnik = parseInt(wykladnik);
+
+            var wynik = Math.pow(podstawa, wykladnik);
+            document.getElementById('wynik').value = wynik;
+        }
+
+        </script>
+    </body>
+</html>
